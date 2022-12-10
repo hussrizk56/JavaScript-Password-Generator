@@ -15,7 +15,7 @@ function questions() {
     // variable length is a prompt
     var length = prompt("Choose password length between 8 and 128 characters");
     // variable askNumbers is a confirm prompt
-    var askNumbers = confirm("Do you want your password to include numbers? If Not click cancel");
+    var askNumbers = confirm("Do you want your password to include numbers? If No click cancel");
     // variable askLowerCase is a confirm prompt to ask about including a number
     var askLowerCase = confirm("Do you want your password to include lower case letters? If NO click cancel");
     // variable askUpperCase is  a confirm prompt to ask about including an upper case
