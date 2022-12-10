@@ -1,3 +1,6 @@
+// Assignment code here
+
+//Function to accept length from user and validate it
 
 var acceptLength = function()
 { //alphabates and special characters validation
@@ -21,3 +24,15 @@ var acceptLength = function()
 
   return promptLength; // return user entered length
 };
+
+
+//Function to accept Character type from user and validate it 
+var acceptcharType = function()
+{ //Provide choice to user to select character type
+  var promptcharType = window.prompt("Please enter type of characters, select from following choices (1 or 2):\n"+
+                                      "1 : lowercase,uppercase characters and numbers\n"+
+                                      "2 : lowercase,uppercase characters, numbers and special characters ");
+  while (promptcharType===null)//If user select Cancel, come out of program
+  { 
+   return 1;
+  }
