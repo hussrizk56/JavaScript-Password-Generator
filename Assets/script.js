@@ -53,22 +53,3 @@ function generatePassword() {
   if(!includeLowerCase && !includeUpperCase && !includeNumbers && !includeSpecialCharacters) {
     enter = window.prompt("You must select at least one crieria");
   }
-  // If any of the 4 criteria is selected to generate a password. 
-  else if(includeLowerCase || includeUpperCase || includeNumbers || includeSpecialCharacters) {
-  characterList = characterList.concat(lowerCase, upperCase, numbers, specialCharacters); 
-  console.log(characterList)}; 
-
-var passwordBlank = [];
-
-// Iteration for random selection. 
-for(var i = 0; i < passwordLength; i++) {
-  var enteredcriteria = Math.floor(Math.random() * characterList.length);
-  passwordBlank.push(characterList[enteredcriteria]); 
-  console.log(characterList); 
-}
-
-// Returns the commands to generate a password. 
-var password = passwordBlank.join("");
-console.log("Your password is: " + password); 
-return password; 
-}
