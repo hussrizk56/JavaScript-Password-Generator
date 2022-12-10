@@ -7,11 +7,13 @@ For this weeks assignment I created a password generator website. The employee c
 Added code 
 
 
+
 Screen shot:
 
 <div>
-   <img src="Assets/Passwordgenerator.jpg" width="350px"/> 
+   <img src="Assets/Passwordgenerator.jpg" width="500px"/> 
 </div>
 
 
+Link: 
 
