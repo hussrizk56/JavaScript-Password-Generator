@@ -4,12 +4,13 @@ For this weeks assignment I created a password generator website. The employee c
 
 
 ## Steps Taken:
+Added code 
 
 
 Screen shot:
 
 <div>
-   <img src="Assets/Passwordgenerator.jpg">
+   <img src="Assets/Passwordgenerator.jpg" width="350px"/> 
 </div>
 
 
