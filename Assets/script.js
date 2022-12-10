@@ -1,38 +1,74 @@
-// Assignment code here
+// Assignment code here:
 
-//Function to accept length from user and validate it
+var passwordLength; 
+var lowerCase; 
+var upperCase; 
+var numbers;
+var specialCharacters;
+var enter; 
 
-var acceptLength = function()
-{ //alphabates and special characters validation
-  var formatStr = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
- 
-  //Provide prompt to user to enter password length
-  var promptLength = window.prompt("Please enter length of the password, length can be between 8 to 128 characters");
+// Here is the list for all the variables (Arrays). 
+var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]; 
+var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; 
+var specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*"]; 
 
-  var alphanumStr = (/[A-Za-z]/).test(promptLength);
-  var specialChar = formatStr.test(promptLength);
 
-  while(promptLength===null)//If user select Cancel, come out of program
-  { return 1;
+// Get references to the #generate element
+var generateBtn = document.querySelector("#generate");
+
+// Write password to the #password input.
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+}
+
+// Add event listener to generate button.
+generateBtn.addEventListener("click", writePassword);
+
+// Function to create the password with else/if. 
+function generatePassword() {
+  passwordLength = window.prompt("Choose the number of characters you would like. You can choose between 8-128 characters."); 
+  console.log("Password Length" + passwordLength);
+  var characterList = []; 
+  if(passwordLength < 8 || passwordLength > 128) {
+    passwordLength = window.prompt("You must choose between 8 and 128");
+    console.log("Password length " + passwordLength);
   }
-  
-  if (parseInt(promptLength) < 8 || parseInt(promptLength) > 128 || promptLength ==="" || alphanumStr || specialChar)
-  {
-    window.alert("Please enter number between 8 to 128.");
-    return 0;
+
+  else {  
+    var includeLowerCase = confirm("Would you like to include lower case letter? If no click cancel");
+    console.log("Lower case letters " + includeLowerCase);
+    var includeUpperCase = confirm("Would you like to include upper case letters? If no click cancel");
+    console.log("Upper case letters " + includeUpperCase);
+    var includeNumbers = confirm("Would you like to include numbers? If no click cancel");
+    console.log("Numbers " + includeNumbers); 
+    var includeSpecialCharacters = confirm("Would you like to include special characters? If no click cancel"); 
+    console.log("Special Characters " + includeSpecialCharacters); 
   }
 
-  return promptLength; // return user entered length
-};
-
-
-//Function to accept Character type from user and validate it 
-var acceptcharType = function()
-{ //Provide choice to user to select character type
-  var promptcharType = window.prompt("Please enter type of characters, select from following choices (1 or 2):\n"+
-                                      "1 : lowercase,uppercase characters and numbers\n"+
-                                      "2 : lowercase,uppercase characters, numbers and special characters ");
-  while (promptcharType===null)//If user select Cancel, come out of program
-  { 
-   return 1;
+  // User needs to select at least 1 of the 4 criteria noted above to generate a password. 
+  if(!includeLowerCase && !includeUpperCase && !includeNumbers && !includeSpecialCharacters) {
+    enter = window.prompt("You must select at least one crieria");
   }
+  // If any of the 4 criteria is selected to generate a password. 
+  else if(includeLowerCase || includeUpperCase || includeNumbers || includeSpecialCharacters) {
+  characterList = characterList.concat(lowerCase, upperCase, numbers, specialCharacters); 
+  console.log(characterList)}; 
+
+var passwordBlank = [];
+
+// Iteration for random selection. 
+for(var i = 0; i < passwordLength; i++) {
+  var enteredcriteria = Math.floor(Math.random() * characterList.length);
+  passwordBlank.push(characterList[enteredcriteria]); 
+  console.log(characterList); 
+}
+
+// Returns the commands to generate a password. 
+var password = passwordBlank.join("");
+console.log("Your password is: " + password); 
+return password; 
+}
