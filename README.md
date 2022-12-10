@@ -19,5 +19,5 @@ Screen shot:
 </div>
 
 
-Link: 
+Link: https://hussrizk56.github.io/JavaScript-Password-Generator/
 
