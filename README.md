@@ -9,6 +9,7 @@ For this weeks assignment I created a password generator website. The employee c
 * Used the "for" loop to make sure that the math function was randomized.
 * The "return" function was used to have the password to generate on the website created. 
 * The end result was to provide a strong and random password that can be used. 
+* Changed the website name in the HTML to say Huss's password generator to be a little creative. 
 
 
 
