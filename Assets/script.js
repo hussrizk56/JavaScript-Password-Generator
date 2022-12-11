@@ -22,7 +22,7 @@ function writePassword() {
   var newPassword = generatePassword();
   passwordText.value = newPassword;
 } else {
-  passwordText.value = "Your password does not meet criteria requirements. Please try again!";
+  passwordText.value = "Your password does not meet character length criteria requirements. Please try again!";
 
 }
 
