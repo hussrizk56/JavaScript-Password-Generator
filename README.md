@@ -13,7 +13,7 @@ For this weeks assignment I created a password generator website. The employee c
 
 
 
-Screen shot:
+Screenshot:
 
 <div>
    <img src="Assets/Passwordgenerator.jpg" width="500px"/> 
