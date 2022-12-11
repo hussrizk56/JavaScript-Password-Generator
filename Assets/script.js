@@ -44,7 +44,7 @@ function getPrompts(){
     characterLength = parseInt(prompt("How many characters would you like? The character length must be within 8-128."));
 
     if (isNaN(characterLength) || characterLength < 8 || characterLength > 128) {
-      alert("You character length has to be a number between 8-128. Please try again.");
+      alert("You character length has to be a number between 8-128. Please try again!");
       return false;
     }
 
